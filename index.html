@@ -83,7 +83,7 @@ function initialize() {
   transitLayer.setMap(map);
   var markers = [];
   var positions = {};
-  d3.tsv('data/subway-Red.tsv', function (data) {
+  d3.tsv('data/subway-Red.json', function (data) {
     var results = data.map(function (datum) {
       var parsed = JSON.parse(datum.data);
       var string = parsed.map(function (d) { return d.join("\t"); }).join("\n");
